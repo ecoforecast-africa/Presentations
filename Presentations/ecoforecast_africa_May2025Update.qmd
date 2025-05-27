@@ -1,0 +1,221 @@
+---
+title: ""
+author: ""
+format: 
+  revealjs:
+    theme: dark
+    slide-number: true
+    self-contained: true
+html-math-method: mathjax
+bibliography: book.bib
+---
+
+# Ecoforecast Africa {.smaller .center background-color="#33431e"}
+
+![](img/ecoforecast_elephant.png){width="100%"}
+
+Jasper Slingsby $^1$ and Glenn Moncrieff $^2$
+
+::: {style="font-size: 50%;"}
+
+$^1$ University of Cape Town and South African Environmental Observation Network | $^2$ The Nature Conservancy
+
+:::
+
+## Why an EFI for Africa? {.smaller background-color="#33431e"}
+
+Most data products that inform global policy are developed in the Global North, but these are erroneous in places, largely due to lack of local knowledge...
+
+```{r echo = F, fig.align = 'center', out.width = '90%'}
+knitr::include_app("https://www.globalforestwatch.org/map/", 
+  height = "400px")
+```
+
+Being "stakeholders" is not good enough. We need Africans holding the reigns.
+
+::: {style="font-size: 50%;"}
+
+www.globalforestwatch.org
+
+:::
+
+## Everyone else is getting one? {.smaller background-color="#33431e"}
+
+::: columns
+
+::: {.column width="45%"}
+![](img/Canada_EFI.png){width="100%"}
+![](img/EFI.png){width="100%"}
+:::
+
+::: {.column width="45%"}
+![](img/EU_EFI.png){width="100%"}
+![](img/OEFI.png){width="100%"}
+:::
+
+::::
+
+We don't want Africa left behind... again...
+
+
+## The South contribute significant data {.smaller background-color="#33431e"}
+
+![](img/GBIF_South.png){width="100%"}
+
+We just need the skills and resources to make the most of it!
+
+
+
+## Although Africa is lagging behind... {.smaller background-color="#33431e"}
+
+::: columns
+
+::: {.column width="50%"}
+
+![](img/GBIF_Africa.png)
+
+:::
+
+::: {.column width="50%"}
+![](img/GBIF_records_by_continent.png)
+:::
+
+And more than half of GBIF records are from South Africa (38,145,962 records).
+
+Hopefully showing the value of our own data to our decision makers will improve this.
+
+::::
+
+## So what have we done? {.smaller background-color="#c2c190"}
+
+::: columns
+::: {.column width="50%"}
+![Web page and form to collect expressions of interest](img/ecoforecast_africa_web.png){width="100%"}
+![](img/qr-code.png){width="50%"}
+:::
+
+::: {.column width="50%"}
+-   Set up a webpage with a Google form ([ecoforecast.africa](www.ecoforecast.africa))
+
+-   Chatted to people and put out a few calls
+
+-   Excuses!
+
+    - Glenn and I have both changed jobs recently
+    - Working out where this stands relative to a separate initiative to start an African Quantitative Ecology Network (we'll email our sign-ups once we know more...)
+    
+-   First meeting in the next few weeks
+    
+:::
+:::
+
+
+## Interest so far? {.smaller background-color="#c2c190"}
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(googlesheets4)
+library(viridis)
+
+gs4_auth(email = "jslingsby@gmail.com")
+
+dat = read_sheet("https://docs.google.com/spreadsheets/d/18NHGbF6ItGMOvmCg8c7ut4k5R_fqlBDAYViTihhcXwc/edit?resourcekey#gid=1238861919")
+
+dcontdf <- dat %>% group_by(Continent) %>% summarise(value = n())
+
+ddf <- dat %>% group_by(Country) %>% summarise(value = n())
+
+world <- map_data("world")
+
+world %>%
+  merge(ddf, by.x = "region", by.y = "Country", all.x = T) %>%
+  arrange(group, order) %>%
+  ggplot(aes(x = long, y = lat, group = group, fill = value)) +
+  geom_polygon(color = "white", linewidth = 0.2) +
+  scale_fill_viridis("", na.value = "gray90") +
+  theme_minimal() +
+  theme(axis.text = element_blank(),
+        axis.title = element_blank(),
+        panel.grid = element_blank())
+```
+
+Africa `r dcontdf$value[which(dcontdf$Continent == "Africa")]` (12 countries) | North America `r dcontdf$value[which(dcontdf$Continent == "North America")]` | Europe `r dcontdf$value[which(dcontdf$Continent == "Europe")]` | Asia `r dcontdf$value[which(dcontdf$Continent == "Asia")]` | Many from or work in Africa
+
+## Interest so far? {.smaller background-color="#c2c190"}
+
+
+```{r echo=FALSE, fig.cap = "", fig.width=6, fig.align = 'center', warning = F, message = F, out.width="125%"}
+
+# Make summary data
+cridata <- dat %>% group_by(Role) %>% summarize(count = n()) %>%na.omit()
+
+# Shorten labels and add linebreaks
+cridata <- cridata %>% mutate(label = recode(Role, 
+                          "Decision maker (e.g. conservation practitioner, government official, etc)" = "Decision maker",
+                          "Faculty (Lecturer, Prof, etc)" = "Faculty",
+                          "Non-academic Researcher" = "Non-academic \n Researcher"))
+
+# Compute percentages
+cridata$fraction <- cridata$count / sum(cridata$count)
+
+# Compute the cumulative percentages (top of each rectangle)
+cridata$ymax <- cumsum(cridata$fraction)
+
+# Compute the bottom of each rectangle
+cridata$ymin <- c(0, head(cridata$ymax, n=-1))
+
+# Compute label position
+cridata$labelPosition <- (cridata$ymax + cridata$ymin) / 2
+
+# Make the plot
+ggplot(cridata, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=3, fill=label)) +
+  geom_rect() +
+  geom_text(x=4.6, aes(y=labelPosition, label=label, color=label)) + # x here controls label position (inner / outer)
+  scale_fill_brewer(palette="Set1", direction = 1) +
+  scale_color_brewer(palette="Set1", direction = 1) +
+  coord_polar(theta="y") +
+  xlim(c(2, 4.5)) +
+  theme_void() +
+  theme(legend.position = "none")
+```
+
+
+## Interest so far? {.smaller background-color="#c2c190"}
+
+<br/>  
+
+![](img/survey_response_participation.png){width="100%"}
+
+
+Great willingness to contribute skills!!! Especially from members of other EFIs
+
+<br/> 
+
+Much interest in research collaboration too!
+
+## Where to from here? {.smaller background-color="#33431e"}
+
+::: columns
+::: {.column width="50%"}
+![Web form at [ecoforecast.africa](www.ecoforecast.africa)](img/qr-code.png){width="100%"}
+:::
+
+::: {.column width="50%"}
+
+-   **Sign up!!!**
+
+<br/>  
+
+-   First meeting to discuss where to from here in the next few weeks
+
+<br/>  
+
+- What model the African EFI adopts will be up for discussion. Note that while we are kickstarting the initiative, we do not claim ownership and invite broad participation, diverse perspectives and suggestions for the best leadership model.
+    
+:::
+:::
+
+# Thanks!!! {.center background-color="#33431e"}
+
+
