@@ -14,15 +14,91 @@ bibliography: book.bib
 
 ![](img/ecoforecast_elephant.png){width="100%"}
 
-Jasper Slingsby $^1$
+Jasper Slingsby
 
 ::: {style="font-size: 50%;"}
 
-$^1$ Centre for Statistics in Ecology, the Environment and Conservation, Department of Biological Sciences, University of Cape Town | $^2$ South African Environmental Observation Network, Fynbos Node
+Centre for Statistics in Ecology, the Environment and Conservation, Department of Biological Sciences, University of Cape Town
+
+South African Environmental Observation Network, Fynbos Node
 
 :::
 
 ## What is ecological forecasting? {.smaller background-color="#33431e"}
+
+<br>
+
+<br>
+
+<br>
+
+::: fragment
+
+### More specifically: _Iterative Near-term Ecological Forecasting_
+
+:::
+
+##  {.smaller background-color="#33431e"}
+
+### Iterative near-term ecological forecasting
+
+<br/>
+
+> Seeks to *make prediction a central focus in ecology*, on a time scale that is both useful for decision makers and allows us to learn from testing our predictions (i.e. days to decades)
+
+<br/>
+
+::: fragment
+-   (Automatically) iteratively updat as new data becomes available allowing ongoing assessment, refinement and improved accuracy.
+-   The **"gold standard"** is a reproducible informatics pipeline that can ingest new data and **make new forecasts automatically** with minimal user input.
+-   This poses a number of major challenges and requires a big improvement in quantitative skills in biology.
+-   Fortunately, any steps towards the gold standard are likely to be useful, even if we never get there.
+:::
+
+##  {.smaller background-color="#c2c190"}
+
+### Iterative near-term ecological forecasting 
+
+This can also be represented as a cycle, mirroring the scientific method:
+
+:::::: columns
+::: {.column width="45%"}
+![From @Dietze2018](img/ecoforecastingloop.png){fig-align="center"}
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="45%"}
+The key steps are:
+
+1.  Make a **forecast** based on initial conditions
+2.  **Compare** your forecast to new observations
+3.  **Analyse** the new observations in the context of your forecast and original data
+4.  **Update** estimates of the current state of the system (data and understanding), before making a new forecast
+:::
+::::::
+
+
+##  {background-color="#33431e"}
+
+### Iterative near-term ecological forecasting 
+
+Iterative ecological forecasts are thus aimed at:
+
+1.  ***applied*** outcomes, through providing evidence to support ***decision making***
+2.  ***knowledge generation*** through iterative learning i.e. ***the scientific method***
+
+So it's a great way of getting scientists to engage in real-world problems, demonstrating the value of our science, and ***learning by doing!***
+
+
+## {.smaller background-color="#33431e"}
+
+### Iterative ecological forecasting in context 
+
+![](img/dietze2018_F1.jpg){fig-align="center"}
+
+This figure from Dietze et al. 2018 provides an expanded representation of these conceptual links between iterative ecological forecasting, the scientific method, and decision making (here in the context of *adaptive management*, which is a management paradigm that focuses on learning by doing).
 
 
 ## Why an EFI for Africa? {.smaller background-color="#33431e"}
@@ -99,18 +175,15 @@ Hopefully showing the value of our own data to our decision makers will improve 
 
 ::: {.column width="50%"}
 
-<br>
+-   Building a community of practice to develop ecoforecasting capacity in Africa
 
-<br>
+-   Held our first meeting to discuss and plan the way forward a few weeks ago
+    - Early days, but we have a lot of interest and enthusiasm
+    - Now's a good time to get involved if you'd like to help steer the ship
 
--   Aiming to build a community of practice to start building ecoforecasting capacity in Africa
-
--   Set up a [Google form for sign-ups](https://plantecolo.gy/projects/current/ecoforecasting/)
-
--   Building a website (will be ecoforecast.africa)
-
--   Held our first meeting a few weeks ago to discuss and plan the way forward
-
+-   Visit the website - [https://ecoforecast.africa](https://ecoforecast.africa)
+    -   Sign up using this [Google form](https://forms.gle/LXSFew3odfh2oE2A7)
+    -   Or scan the QR code
     
 :::
 :::
@@ -125,13 +198,16 @@ Hopefully showing the value of our own data to our decision makers will improve 
 
 ::: {.column width="50%"}
 
-<br>
 
 <br>
 
--   Running an in-person training workshop 21-25 July 2025 in Cape Town, South Africa
+-   Running an in-person training workshop 
+    - 21-25 July 2025
+    - Cape Town, South Africa
 -   Instruction led by Prof Mike Dietze, Boston University, USA and EFI founder
--   Supported by SEEC and others
+    -   Supported by SEEC and others
+-   Visit the website for more - [https://ecoforecast.africa](https://ecoforecast.africa)
+    -   Or sign up using this the QR code
     
 :::
 :::
@@ -224,24 +300,25 @@ Much interest in research collaboration too!
 
 ::: columns
 ::: {.column width="50%"}
-![Web form at [ecoforecast.africa](www.ecoforecast.africa)](img/qr-code.png){width="100%"}
+![Visit [ecoforecast.africa](www.ecoforecast.africa)](img/EcoforecastAfricaQR.png){width="100%"}
 :::
 
 ::: {.column width="50%"}
 
 -   **Sign up!!!**
+    -   To join Ecoforecast Africa
+    -   To participate in the course
 
 <br/>  
 
--   First meeting to discuss where to from here in the next few weeks
+- What model the African EFI adopts is till in flux. While we are kickstarting the initiative, we do not claim ownership and invite broad participation, diverse perspectives and suggestions for the best leadership model.
 
-<br/>  
-
-- What model the African EFI adopts will be up for discussion. Note that while we are kickstarting the initiative, we do not claim ownership and invite broad participation, diverse perspectives and suggestions for the best leadership model.
+- Students welcome!
     
 :::
 :::
 
 # Thanks!!! {.center background-color="#33431e"}
 
+https://ecoforecast.africa
 
