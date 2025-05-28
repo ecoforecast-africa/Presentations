@@ -49,8 +49,8 @@ South African Environmental Observation Network, Fynbos Node
 <br/>
 
 ::: fragment
--   (Automatically) iteratively updat as new data becomes available allowing ongoing assessment, refinement and improved accuracy.
--   The **"gold standard"** is a reproducible informatics pipeline that can ingest new data and **make new forecasts automatically** with minimal user input.
+-   Aims to aid environmental decision making.
+-   The **"gold standard"** is a reproducible informatics pipeline that can iteratively ingest new data and **make new forecasts automatically** as new data become available with minimal user inpu - allowing ongoing assessment, refinement and improved accuracy.
 -   This poses a number of major challenges and requires a big improvement in quantitative skills in biology.
 -   Fortunately, any steps towards the gold standard are likely to be useful, even if we never get there.
 :::
@@ -59,7 +59,7 @@ South African Environmental Observation Network, Fynbos Node
 
 ### Iterative near-term ecological forecasting 
 
-This can also be represented as a cycle, mirroring the scientific method:
+Can be represented as a cycle, mirroring the scientific method:
 
 :::::: columns
 ::: {.column width="45%"}
@@ -74,7 +74,7 @@ The key steps are:
 
 1.  Make a **forecast** based on initial conditions
 2.  **Compare** your forecast to new observations
-3.  **Analyse** the new observations in the context of your forecast and original data
+3.  **Analyse** the observations in the context of your forecast and initial conditions
 4.  **Update** estimates of the current state of the system (data and understanding), before making a new forecast
 :::
 ::::::
@@ -170,7 +170,7 @@ Hopefully showing the value of our own data to our decision makers will improve 
 ::: columns
 ::: {.column width="50%"}
 ![Web form to collect expressions of interest](img/ecoforecast_africa_web.png){width="100%"}
-![](img/qr-code.png){width="50%"}
+![](img/EcoforecastAfricaQR.png){width="50%"}
 :::
 
 ::: {.column width="50%"}
@@ -181,9 +181,7 @@ Hopefully showing the value of our own data to our decision makers will improve 
     - Early days, but we have a lot of interest and enthusiasm
     - Now's a good time to get involved if you'd like to help steer the ship
 
--   Visit the website - [https://ecoforecast.africa](https://ecoforecast.africa)
-    -   Sign up using this [Google form](https://forms.gle/LXSFew3odfh2oE2A7)
-    -   Or scan the QR code
+-   Visit the website - [https://ecoforecast.africa](https://ecoforecast.africa) to sign up
     
 :::
 :::
@@ -193,7 +191,7 @@ Hopefully showing the value of our own data to our decision makers will improve 
 ::: columns
 ::: {.column width="50%"}
 ![](img/NEON_NearTermEcoforecasting.png){width="100%"}
-![](img/EFIcourse2025_QR.png){width="50%"}
+![](img/EcoforecastAfricaQR.png){width="50%"}
 :::
 
 ::: {.column width="50%"}
@@ -309,9 +307,8 @@ Much interest in research collaboration too!
     -   To join Ecoforecast Africa
     -   To participate in the course
 
-<br/>  
-
-- What model the African EFI adopts is till in flux. While we are kickstarting the initiative, we do not claim ownership and invite broad participation, diverse perspectives and suggestions for the best leadership model.
+- What model the African EFI adopts is still in flux. 
+    - While we are kickstarting the initiative, we do not claim ownership and invite broad participation, diverse perspectives and suggestions for the best leadership model.
 
 - Students welcome!
     
